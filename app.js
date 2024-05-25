@@ -5,13 +5,13 @@ import { postsModel } from './models/posts/posts.model.js'
 import { commentsModel } from './models/comments/comments.model.js'
 import bootstrap from './bootsrap/bootstarp.js'
 const app = express()
-const port = 3000
 
 
+const port =process.env.PORT || 3000
 
 bootstrap(app)
 
-sequelize.sync({ alter: true })
+sequelize.sync()
 
 
 
