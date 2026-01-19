@@ -4,7 +4,7 @@ import { usersModel } from "../../models/usres/users.model.js"
 
 const signup = async (req, res) => {
     let usre = await usersModel.create(req.body)
-    res.status(201).json({ message: 'success', usre })
+    res.status(201).json({ message: 'success'})
 }
 
 

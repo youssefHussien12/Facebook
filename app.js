@@ -4,11 +4,12 @@ import { usersModel } from './models/usres/users.model.js'
 import { postsModel } from './models/posts/posts.model.js'
 import { commentsModel } from './models/comments/comments.model.js'
 import bootstrap from './bootsrap/bootstarp.js'
+import cors from "cors"
 const app = express()
 
 
 const port =process.env.PORT || 3000
-
+app.use(cors())
 bootstrap(app)
 
 sequelize.sync()
